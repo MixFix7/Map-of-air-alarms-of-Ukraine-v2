@@ -2,22 +2,13 @@ import './App.css';
 import axios from 'axios';
 import { Component } from 'react';
 
-const appd = () => {
-  return(
-    <div>
-      <h1>Hello World</h1>
-    </div>
-  )
-}
-
-
 class App extends Component{
   state = { details: [], }
 
   componentDidMount() {
     this.fetchData();
 
-    this.interval = setInterval(this.fetchData, 15000);
+    this.interval =  setInterval(() => this.fetchData(), 15000);
   };
 
   componentWillUnmount () {
@@ -35,8 +26,9 @@ class App extends Component{
     })
     .catch(err => {
       console.error(err);
-    });
-  }
+  })};
+  
+  
   render() {
     return (
       <div>
@@ -98,12 +90,12 @@ class App extends Component{
           </div>
         ))}
       </div>
-    )
+    );
   };
 
 };
 
 
 
-export default appd;
+export default App;
 
