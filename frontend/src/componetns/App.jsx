@@ -22,7 +22,6 @@ class App extends Component{
     axios.get("http://localhost:8000/api/ukraineApi/")
     .then(res => {
       const data = res.data;
-      console.log(data)
       this.setState({
         details: data
       });
@@ -34,12 +33,14 @@ class App extends Component{
   
   render() {
 
-    const {data} = this.state
+    const data = this.state
 
     return (
       <div>
-        <Map data={data} className='fill-black'/>
-        <Footer/>
+        
+
+        <Map data={data}/>
+        <Footer className=''/>
       </div> 
     );
   };
