@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import UkraineAlarmsStatus
+from .models import UkraineRegions
 # Register your models here.
 
-admin.site.register(UkraineAlarmsStatus)
+admin.site.register(UkraineRegions)
 

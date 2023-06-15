@@ -1,8 +1,10 @@
 from rest_framework import serializers
-from .models import UkraineAlarmsStatus
+from .models import UkraineRegions
 
 
 class UkraineSerializer(serializers.ModelSerializer):
     class Meta:
-        model = UkraineAlarmsStatus
+        model = UkraineRegions
         fields = '__all__'
+
+
