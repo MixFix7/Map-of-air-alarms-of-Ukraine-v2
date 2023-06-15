@@ -6,5 +6,15 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [ function ({ addComponents }) {
+          addComponents({
+      '.svg-fill': {
+        '@svg': {
+          fill: 'currentColor',
+        },
+      },
+    });
+  },],
 }
+
+

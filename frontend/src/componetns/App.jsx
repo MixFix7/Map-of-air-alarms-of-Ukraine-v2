@@ -33,15 +33,14 @@ class App extends Component{
   
   
   render() {
+
+    const {data} = this.state
+
     return (
       <div>
-        <Map className='fill-black'/>
+        <Map data={data} className='fill-black'/>
         <Footer/>
-
-      </div>
-
-      
-       
+      </div> 
     );
   };
 
