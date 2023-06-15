@@ -2,19 +2,6 @@ import React, { useState } from 'react'
 
 
 const Map = () => {
-  const [regionColors, setRegionColors] = useState({});
-
-  const changeRegionColor = (regionId, color) => {
-
-    if (regionColors[regionId] === color) {
-      color = 'initial'
-    }
-
-    setRegionColors(prevState => ({
-      ...prevState,
-      [regionId]: color,
-    }));
-  }
 
   return (
     <div className='flex items-center justify-center h-screen'>
