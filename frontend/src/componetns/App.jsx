@@ -1,53 +1,49 @@
 import './../css/App.css';
 import axios from 'axios';
-import { Component } from 'react';
+import { Component, useState, useEffect } from 'react';
 import Map from './Home/Map';
 // import Map from './screen/map';
 import Footer from './Home/Footer';
 
-class App extends Component{
-  state = { details: [], }
 
-  componentDidMount() {
-    this.fetchData();
+const App = () => {
+  const [details, setDetails] = useState("null");
 
-    this.interval =  setInterval(() => this.fetchData(), 15000);
-  };
+  useEffect(() => {
+    fetchData();
 
-  componentWillUnmount () {
-    clearInterval(this.interval);
-  };
+    const interval = setInterval(() => fetchData(), 15000);
 
-  fetchData() {
-    axios.get("http://localhost:8000/api/ukraineApi/")
-    .then(res => {
-      const data = res.data;
-      this.setState({
-        details: data
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  const fetchData = () => {
+    axios
+      .get("http://localhost:8000/api/ukraineApi/")
+      .then((res) => {
+        const data = res.data;
+        setDetails(data);
+      })
+      .catch((err) => {
+        console.error(err);
       });
-    })
-    .catch(err => {
-      console.error(err);
-  })};
-  
-  
-  render() {
-
-    const data = this.state
-
-    return (
-      <div>
-        
-
-        <Map data={data}/>
-        <Footer className=''/>
-      </div> 
-    );
   };
 
+  console.log(details);
+
+  if (details === "null") {
+    console.log("fsdfsdf");
+    return <div>...Loading</div>;
+  }
+
+  return (
+    <div>
+      <Map details={details}/>
+    </div>
+  );
 };
-
-
 
 export default App;
 
