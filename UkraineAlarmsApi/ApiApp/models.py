@@ -4,7 +4,7 @@ import time
 
 
 class UkraineRegions(models.Model):
-    datetime = models.DateTimeField()
+    datetime = models.CharField(max_length=50)
     Region = models.CharField(max_length=30)
     Region_en = models.CharField(max_length=30)
     Alarm = models.BooleanField()

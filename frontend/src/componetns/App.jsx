@@ -4,6 +4,7 @@ import { Component, useState, useEffect } from 'react';
 import Map from './Home/Map';
 // import Map from './screen/map';
 import Footer from './Home/Footer';
+import Loader from './Home/loader/Loader';
 
 
 const App = () => {
@@ -34,8 +35,7 @@ const App = () => {
   console.log(details);
 
   if (details === "null") {
-    console.log("fsdfsdf");
-    return <div>...Loading</div>;
+    return <div><Loader/></div>;
   }
 
   return (
