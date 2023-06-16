@@ -2,7 +2,6 @@ import './../static/App.css';
 import axios from 'axios';
 import { Component, useState, useEffect } from 'react';
 import Map from './Home/Map';
-// import Map from './screen/map';
 import Footer from './Home/Footer';
 import Loader from './Home/UI/Loader';
 import RefreshButton from './Home/buttons/RefreshButton';
