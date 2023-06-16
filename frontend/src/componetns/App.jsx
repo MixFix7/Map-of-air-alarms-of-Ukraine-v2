@@ -34,11 +34,6 @@ const App = () => {
       });
   };
 
-  const refreshCommand = () => {
-    fetchData()
-  }
-
-  console.log(details);
 
   if (details === "null") {
     return <Loader/>;
@@ -49,7 +44,7 @@ const App = () => {
       <Map details={details}/>
       <Footer>
         <Timer>
-          <RefreshButton command={refreshCommand}/>
+          <RefreshButton command={fetchData}/>
         </Timer>
       </Footer>
     </div>
