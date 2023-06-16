@@ -6,8 +6,8 @@ const Map = ( {details} ) => {
 
 
   return (
-    <div className='flex items-center justify-center h-screen'>
-      <svg baseProfile="tiny" height="670" stroke="#ffffff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" version="1.2" viewBox="0 0 1000 670" width="1000" xmlns="http://www.w3.org/2000/svg">
+    <div className='flex items-center justify-center Map'>
+      <svg baseProfile="tiny" height="900" stroke="#ffffff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.5" version="1.2" viewBox="0 0 1000 670" width="1700" xmlns="http://www.w3.org/2000/svg">
         <path
            className={details?.["24"].Alarm ? 'fill-red-600' : 'fill-gray-800'}
           id='region25'

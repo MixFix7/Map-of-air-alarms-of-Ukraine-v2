@@ -41,6 +41,7 @@ const App = () => {
   return (
     <div>
       <Map details={details}/>
+      <Footer/>
     </div>
   );
 };
