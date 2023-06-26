@@ -1,6 +1,6 @@
 # Ukraine Alarm Website
 
-![Ukraine Alarm Website](https://example.com/ukraine-alarm-website.png)
+![Ukraine Alarm Website](https://github.com/MixFix7/Map-of-air-alarms-of-Ukraine-v2/blob/main/ukraine_map.png)
 
 ## Description
 
